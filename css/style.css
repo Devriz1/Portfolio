@@ -358,15 +358,23 @@ footer .link-group a:hover{
 
 
 
+/* Add these improved mobile styles to your CSS file */
+
+/* Global mobile adjustments */
 @media (max-width: 768px) {
     .home h2 {
       font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+    .c-orange {
+      font-size: 2.5rem;
     }
     .service-card {
       margin-bottom: 20px;
     }
     .progress-card {
       margin-bottom: 15px;
+      padding: 8% 5%;
     }
     .portfolio .card {
       margin-bottom: 20px;
@@ -381,11 +389,32 @@ footer .link-group a:hover{
     .social-links button {
       margin: 0 5px;
     }
+    
+    /* Make contact form responsive */
+    .contact-form .form-control {
+      width: 100%;
+      padding: 8px;
+    }
+    
+    /* Adjust buttons size for mobile */
+    .c-btn {
+      padding: 10px 20px !important;
+      font-size: 1rem;
+    }
+    
+    /* Improve circular progress cards layout */
+    .progress-card {
+      margin-left: 0 !important;
+    }
   }
   
   @media (max-width: 576px) {
     .home h2 {
       font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .c-orange {
+      font-size: 2rem;
     }
     .heading h3 {
       font-size: 1.5rem;
@@ -397,12 +426,37 @@ footer .link-group a:hover{
     .portfolio .badge {
       font-size: 0.7rem;
     }
+    
+    /* Better footer layout for very small screens */
     .link-group {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      align-items: center;
     }
     .link-group .vr {
       display: none;
+    }
+    
+    /* Fix navigation spacing */
+    .navbar-nav {
+      gap: 0 !important;
+    }
+    .navbar-nav .nav-item {
+      margin: 5px 0;
+      text-align: center;
+    }
+    
+    /* Add contact button to mobile menu */
+    .mobile-contact-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 8px 20px;
+    }
+    
+    /* Make contact details more compact */
+    .contact-details p {
+      margin-left: 0.5rem;
+      font-size: 1rem;
     }
   }
