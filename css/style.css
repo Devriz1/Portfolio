@@ -1,5 +1,7 @@
 /* appling google font over the website  */
 body{
+    display: block;
+    margin: 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
@@ -354,3 +356,53 @@ footer .link-group a:hover{
     animation: pulse 3s infinite;
 }
 
+
+
+@media (max-width: 768px) {
+    .home h2 {
+      font-size: 1.8rem;
+    }
+    .service-card {
+      margin-bottom: 20px;
+    }
+    .progress-card {
+      margin-bottom: 15px;
+    }
+    .portfolio .card {
+      margin-bottom: 20px;
+    }
+    .contact-details {
+      margin-bottom: 25px;
+    }
+    .link-group a {
+      font-size: 0.9rem;
+      padding: 0 8px;
+    }
+    .social-links button {
+      margin: 0 5px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home h2 {
+      font-size: 1.5rem;
+    }
+    .heading h3 {
+      font-size: 1.5rem;
+    }
+    .c-btn {
+      padding: 8px 16px !important;
+      font-size: 0.9rem;
+    }
+    .portfolio .badge {
+      font-size: 0.7rem;
+    }
+    .link-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .link-group .vr {
+      display: none;
+    }
+  }
