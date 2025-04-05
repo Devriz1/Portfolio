@@ -355,7 +355,7 @@ footer .link-group a:hover{
 }
 
 @media (min-width: 768px) {
-    .container {
-      justify-content: space-between;
+    .body {
+      overflow-x: hidden;
     }
   }
