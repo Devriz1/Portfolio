@@ -354,8 +354,3 @@ footer .link-group a:hover{
     animation: pulse 3s infinite;
 }
 
-@media (min-width: 768px) {
-    .body {
-      overflow-x: hidden;
-    }
-  }
