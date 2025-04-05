@@ -33,7 +33,7 @@ body{
     width: 0;
   }
 .navbar-nav a:hover:after { 
-    width: 100%; 
+    width: 100vw; 
     left: 0; 
   }
   /* styling contact btn  */
@@ -77,7 +77,7 @@ body{
 .link::after{
     content: '';
     position: absolute;
-    width: 100%;
+    width: 100vh;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
@@ -292,7 +292,7 @@ body{
 }
 .contact-form .form-control{
     padding: 10px 10px;
-    width: 80%;
+    width: 80vh;
 }
 
 /* footer section starts */
