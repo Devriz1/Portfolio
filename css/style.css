@@ -1,7 +1,5 @@
 /* appling google font over the website  */
 body{
-    display: block;
-    margin: 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
@@ -145,6 +143,7 @@ body{
 /* skill section starts */
 .skill{
     background-color: rgb(234, 234, 249);
+    overflow-x: hidden;
 }
 .progress-card{
     padding: 12% 10% 10% 15%;
@@ -279,6 +278,7 @@ body{
 /* contact section starts */
 .contact{
     background-color: #f3f3f3;
+    overflow-x: hidden;
 }
 .contact-details i{
     font-size: 1.5rem;
