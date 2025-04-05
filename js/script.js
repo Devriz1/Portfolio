@@ -143,20 +143,40 @@ mybutton.addEventListener("click",function(){
   document.documentElement.scrollTop = 0;
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contactForm");
+  const statusMsg = document.getElementById("statusMsg");
 
-  var formData = new FormData();
-  formData.append("name", document.getElementById("name").value);
-  formData.append("email", document.getElementById("email").value);
-  formData.append("mobile", document.getElementById("mobile").value);
-  formData.append("message", document.getElementById("message").value);
-
-  fetch("https://script.google.com/macros/s/AKfycbyop2iZ4-EwH8N5RnRdp5IqLV1BoLf2-dTTuipOT8cwXPLlBPhCdWpnj1yHRJ9je4AL/exec", { // Replace with your Google Apps Script Web App URL
-    method: "POST",
-    body: formData,
-  }).then(response => {
-    document.getElementById("formStatus").style.display = "block";
-    document.getElementById("contactForm").reset();
-  }).catch(error => console.error("Error!", error));
+  if (form) {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      
+      // Show loading message
+      statusMsg.innerText = "Sending message...";
+      
+      // Use FormData for better form handling
+      const formData = new FormData(form);
+      
+      try {
+        // Use your preferred endpoint - I've kept Formspree from your original code
+        const response = await fetch("https://formspree.io/f/xldjpkrq", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+        
+        if (response.ok) {
+          statusMsg.innerText = "✅ Message sent successfully!";
+          form.reset();
+        } else {
+          statusMsg.innerText = "❌ Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        statusMsg.innerText = "❌ Network error. Please check your connection.";
+        console.error("Error submitting form:", error);
+      }
+    });
+  }
 });
